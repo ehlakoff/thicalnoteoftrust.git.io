@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENOT | Ethical Note of Trust</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                ENOT
+                <span class="logo-badge">BETA</span>
+            </a>
+            <div class="nav-links">
+                <a href="#philosophy" class="active">Философия</a>
+                <a href="#mechanism">Механизм</a>
+                <a href="#tokenomics">Токеномика</a>
+                <a href="#roadmap">Дорожная карта</a>
+                <a href="#transparency">Прозрачность</a>
+                <a href="#faq">FAQ</a>
+                <div class="theme-toggle">
+                    <span class="toggle-icon"><i class="fas fa-sun"></i></span>
+                    <div class="toggle-btn" id="themeToggle"></div>
+                    <span class="toggle-icon"><i class="fas fa-moon"></i></span>
+                </div>
+                <a href="https://t.me/EthicalNoteOfTrust" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#philosophy" onclick="closeMobileMenu()">Философия</a>
+            <a href="#mechanism" onclick="closeMobileMenu()">Механизм</a>
+            <a href="#tokenomics" onclick="closeMobileMenu()">Токеномика</a>
+            <a href="#roadmap" onclick="closeMobileMenu()">Дорожная карта</a>
+            <a href="#transparency" onclick="closeMobileMenu()">Прозрачность</a>
+            <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                <span>Тема:</span>
+                <div class="theme-toggle">
+                    <span class="toggle-icon"><i class="fas fa-sun"></i></span>
+                    <div class="toggle-btn" id="mobileThemeToggle"></div>
+                    <span class="toggle-icon"><i class="fas fa-moon"></i></span>
+                </div>
+            </div>
+            <a href="https://t.me/EthicalNoteOfTrust" class="btn btn-outline" target="_blank" onclick="closeMobileMenu()">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge mono">ЭКСПЕРИМЕНТ В БЛОКЧЕЙНЕ TON</div>
+                <h1>Ethical Note of Trust</h1>
+                <p>Абсолютно прозрачный экономический эксперимент по созданию ценности через алгоритмические действия и доверие, закодированное в смарт-контрактах.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">1.9M</span>
+                        <div class="stat-label">Токенов</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">$100</span>
+                        <div class="stat-label">Ежемесячный выкуп</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">5 лет</span>
+                        <div class="stat-label">Блокировка</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">100%</span>
+                        <div class="stat-label">Прозрачность</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#mechanism" class="btn btn-primary">
+                        <i class="fas fa-play-circle"></i> Начать изучение
+                    </a>
+                    <a href="#transparency" class="btn btn-outline">
+                        <i class="fas fa-shield-alt"></i> Проверить контракты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Философия проекта</h2>
+                <p>ENOT бросает вызов традиционным моделям создания ценности в криптопространстве</p>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Код вместо обещаний</h3>
+                    <p>Ценность создается не маркетинговыми обещаниями, а проверяемыми алгоритмическими действиями в блокчейне. Каждая строка кода — это обязательство.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Абсолютная прозрачность</h3>
+                    <p>Каждая транзакция, каждое сжигание токенов, каждый этап развития проекта полностью прозрачны и верифицируемы в реальном времени.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3>Долгосрочная ориентация</h3>
+                    <p>Создатель заблокировал 31.6% токенов на 5 лет, демонстрируя долгосрочные намерения и веру в успех эксперимента.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mechanism Section -->
+    <section id="mechanism" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Механизм работы</h2>
+                <p>Простая и элегантная экономическая модель, основанная на создании дефицита</p>
+            </div>
+            <div class="mechanism-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Финансирование выкупа</h3>
+                        <p>Ежемесячно создатель выделяет $100 личных средств для выкупа токенов ENOT с открытого рынка. Средства поступают из личных сбережений, не из казны проекта.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Покупка на рынке</h3>
+                        <p>Токены приобретаются по рыночной цене через децентрализованные биржи (DEX) в сети TON. Все транзакции публичны и проверяемы в блокчейне.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Сжигание токенов</h3>
+                        <p>Приобретенные токены безвозвратно отправляются на burn-адрес, сокращая общее предложение и создавая устойчивый дефицит на рынке.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Создание ценности</h3>
+                        <p>Постоянное сокращение предложения при сохранении или росте спроса приводит к естественному увеличению ценности оставшихся в обращении токенов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Токеномика</h2>
+                <p>Честное и прозрачное распределение без скрытых сюрпризов</p>
+            </div>
+            <div class="tokenomics-cards">
+                <div class="token-card">
+                    <div class="token-percentage">31.6%</div>
+                    <div class="token-amount">600,000 ENOT</div>
+                    <div class="token-label">Создатель</div>
+                    <div class="token-desc">Заблокировано на 5 лет как гарантия долгосрочных намерений и веры в проект</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-percentage">26.3%</div>
+                    <div class="token-amount">500,000 ENOT</div>
+                    <div class="token-label">Пул ликвидности</div>
+                    <div class="token-desc">Обеспечение торгов на DEX, LP-токены заблокированы на 2 года в контракте</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-percentage">26.3%</div>
+                    <div class="token-amount">500,000 ENOT</div>
+                    <div class="token-label">Казначейство</div>
+                    <div class="token-desc">Стратегический резерв для обеспечения программы сжигания на годы вперед</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-percentage">15.8%</div>
+                    <div class="token-amount">300,000 ENOT</div>
+                    <div class="token-label">Резерв развития</div>
+                    <div class="token-desc">Заблокирован на 1 год для будущего развития экосистемы и партнерств</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Дорожная карта</h2>
+                <p>Поэтапное развитие эксперимента с четкими вехами и измеримыми результатами</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-date">
+                        <div class="date">Q1 2025</div>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Запуск эксперимента</h3>
+                        <p>Разработка и аудит смарт-контрактов, создание токена, развертывание в сети TON, начальное распределение токенов, запуск веб-сайта.</p>
+                        <span class="roadmap-status completed">Завершено</span>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">
+                        <div class="date">Q2 2025</div>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Блокировка ликвидности</h3>
+                        <p>Добавление ликвидности в DEX, блокировка LP-токенов на 2 года, публикация доказательств блокировки, запуск мониторинга.</p>
+                        <span class="roadmap-status">В процессе</span>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">
+                        <div class="date">Q3 2025</div>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Начало программы сжигания</h3>
+                        <p>Запуск ежемесячных выкупов и сжиганий токенов, публикация отчетов о каждой операции, создание дашборда для отслеживания прогресса.</p>
+                        <span class="roadmap-status">В процессе</span>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">
+                        <div class="date">Q4 2025</div>
+                    </div>
+                    <div class="roadmap-content">
+                        <h3>Развитие сообщества</h3>
+                        <p>Создание DAO для управления казначейством, запуск грантовой программы для разработчиков, расширение экосистемы, партнерства.</p>
+                        <span class="roadmap-status">Предстоящий</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section id="transparency">
+        <div class="container">
+            <div class="section-header">
+                <h2>Прозрачность и проверка</h2>
+                <p>Все контракты и транзакции открыты для публичной проверки в реальном времени</p>
+            </div>
+            <div class="transparency-grid">
+                <div class="transparency-item" onclick="openPopup('contract')">
+                    <div class="transparency-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Контракт ENOT</h3>
+                    <div class="address-preview">EQC0-zpECP910bW-FD2moGSAgwHaC9rqiNH3G4vBBkpq0N9O</div>
+                </div>
+                <div class="transparency-item" onclick="openPopup('liquidity')">
+                    <div class="transparency-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Блокировка ликвидности</h3>
+                    <div class="address-preview">EQD1234567890abcdefghijklmnopqrstuvwxyzABCDEF</div>
+                </div>
+                <div class="transparency-item" onclick="openPopup('creator')">
+                    <div class="transparency-icon">
+                        <i class="fas fa-user-lock"></i>
+                    </div>
+                    <h3>Токены создателя</h3>
+                    <div class="address-preview">EQC0-zpECP910bW-FD2moGSAgwHaC9rqiNH3G4vBBkpq0N9O</div>
+                </div>
+                <div class="transparency-item" onclick="openPopup('burn')">
+                    <div class="transparency-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Адрес сжигания</h3>
+                    <div class="address-preview">UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на ключевые вопросы об эксперименте ENOT</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>В чем уникальность ENOT по сравнению с другими токенами?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ENOT не обещает utility, NFT, игры или другие традиционные "полезности". Вместо этого ценность создается через абсолютно прозрачный и проверяемый механизм сжигания, финансируемый создателем из личных средств. Это чистый экономический эксперимент, где ценность определяется исключительно рыночными механизмами и доверием к алгоритмическим действиям.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Что гарантирует, что создатель будет продолжать выкупы?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Создатель заблокировал 31.6% токенов на 5 лет, что демонстрирует долгосрочную заинтересованность в успехе проекта. Кроме того, ежемесячные выкупы составляют всего $100 - сумма, которую создатель готов инвестировать независимо от рыночных условий. Все транзакции фиксируются в блокчейне и доступны для публичной проверки.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Как я могу быть уверен в честности проекта?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Все смарт-контракты открыты для проверки. Блокировки ликвидности и токенов создателя можно верифицировать в блокчейне. Каждая операция по выкупу и сжиганию документируется и публикуется. ENOT построен на принципе "доверяй, но проверяй" - мы предоставляем все инструменты для самостоятельной верификации каждого аспекта проекта.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Каковы риски участия в эксперименте?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Как и любой криптовалютный актив, ENOT подвержен рыночным рискам. Создатель не дает финансовых советов и не гарантирует прибыль. Участие добровольное и должно быть основано на собственном исследовании и понимании механизмов проекта. Ценность токенов может как увеличиваться, так и уменьшаться в зависимости от рыночных условий.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Присоединяйтесь к эксперименту</h2>
+            <p>Станьте частью уникального экономического исследования в блокчейне TON. Изучите документацию, проверьте контракты и присоединяйтесь к сообществу единомышленников.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://t.me/EthicalNoteOfTrust" class="btn btn-white" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram Community
+                </a>
+                <a href="#transparency" class="btn btn-outline" style="border-color: var(--gray-400); color: var(--white);">
+                    <i class="fas fa-file-contract"></i> Проверить контракты
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">ENOT</div>
+                    <p class="footer-description">
+                        Ethical Note of Trust - прозрачный экономический эксперимент в блокчейне TON. 
+                        Создание ценности через алгоритмические действия, а не маркетинговые обещания.
+                        Полная открытость, проверяемость и долгосрочная ориентация.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h3>Проект</h3>
+                    <ul>
+                        <li><a href="#philosophy">Философия</a></li>
+                        <li><a href="#mechanism">Механизм</a></li>
+                        <li><a href="#tokenomics">Токеномика</a></li>
+                        <li><a href="#roadmap">Дорожная карта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Ресурсы</h3>
+                    <ul>
+                        <li><a href="#transparency">Проверка</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://t.me/EthicalNoteOfTrust" target="_blank">Telegram</a></li>
+                        <li><a href="#" onclick="openPopup('contract')">Контракты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ENOT - Ethical Note of Trust. Все права защищены. | Это экономический эксперимент, а не финансовый совет.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 id="popupTitle">Контракт ENOT</h3>
+                <button class="popup-close" onclick="closePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="address-full" id="popupAddress"></div>
+            <div class="popup-actions">
+                <button class="btn btn-outline" onclick="copyAddress()">
+                    <i class="fas fa-copy"></i> Копировать
+                </button>
+                <a href="#" class="btn btn-primary" id="popupLink" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Открыть в Explorer
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
